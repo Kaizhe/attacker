@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -eux
+
+source ./scripts/common.sh
+
+launch "structs" "kaizheh/apache-struts2-cve-2017-5638"
+launch "tomcat" "kaizheh/tomcat-cve-2017-12617"
+launch "activemq" "kaizheh/apache-activemq-cve-2016-3088"
+launch "postgres" "kaizheh/postgres-plpython" "-e POSTGRES_PASSWORD=postgres"
+launch "shellshock" "kaizheh/shellshock-cve-2014-6271"
+launch "couchdb" "kaizheh/couchdb:2.1.0" "-e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password"
+launch "insecure-nginx" "kaizheh/insecure-nginx"
+
+# not work on mac
+#init_couchdb
+
+launch_attacker
+
+attack "structs"
+attack "tomcat"
+attack "activemq"
+attack "postgres"
+attack "shellshock"
+#attack "couchdb" "curl"
+attack "insecure-nginx" "curl"

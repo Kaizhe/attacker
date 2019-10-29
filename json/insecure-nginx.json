@@ -1,0 +1,7 @@
+{
+"name": "insecure nginx",
+"remote_host": "{{.RHOST}}",
+"remote_port": "8081",
+"http_exploit": [{"uri": "/files../"}],
+"reverse_shell": false 
+}

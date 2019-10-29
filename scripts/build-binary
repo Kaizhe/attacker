@@ -1,0 +1,9 @@
+#!/bin/sh
+  
+set -eux
+
+dep ensure
+
+$GOPATH/bin/goimports -w $(find . -type f -name '*.go' -not -path "./vendor/*") || true
+
+env GOOS=$(uname -s | tr '[:upper:]' '[:lower:]') GOARCH=amd64 go build -a
