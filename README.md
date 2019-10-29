@@ -1,4 +1,4 @@
-# attacker
+## Attacker
 
 Attacker is a golang application serve as a wraper of `metasploit` and `curl`. And it comes with the following exploit scenarios:
 
@@ -14,14 +14,19 @@ Attacker is a golang application serve as a wraper of `metasploit` and `curl`. A
 
 * nginx insecure configuration leads to path traversal 
 
-# Build
+## Build
 
 Run `make build`
 
-# Run
+## Run
 
 Run `make run`
 
-# Clean
+## Clean
 
 Run `make clean`
+
+## Todo list
+
+- [x] Containerized Metasploit (with exploit examples)
+- [ ] Convert to k8s deployment yamls
