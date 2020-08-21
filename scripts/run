@@ -11,6 +11,7 @@ launch "postgres" "kaizheh/postgres-plpython" "-e POSTGRES_PASSWORD=postgres"
 launch "shellshock" "kaizheh/shellshock-cve-2014-6271"
 launch "couchdb" "kaizheh/couchdb:2.1.0" "-e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password"
 launch "insecure-nginx" "kaizheh/insecure-nginx"
+launch "tomcat-groovy" "vulfocus/tomcat-cve_2020_9484"
 
 # not work on mac
 #init_couchdb
@@ -24,3 +25,4 @@ attack "postgres"
 attack "shellshock"
 #attack "couchdb" "curl"
 attack "insecure-nginx" "curl"
+attack "tomcat-groovy" "curl"
