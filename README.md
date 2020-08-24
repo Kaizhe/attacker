@@ -14,6 +14,8 @@ Attacker is a golang application serve as a wraper of `metasploit` and `curl`. A
 
 * nginx insecure configuration leads to path traversal 
 
+* tomcat-groovy-cve-2020-9484
+
 ## Build
 
 Run `make build`
